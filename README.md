@@ -4,12 +4,12 @@ next.js + redux + redux-saga + react-testing-library + cypress
 
 ## Step by step guide
 
-Run the commands
-`npm init -y`
-`npm install --save react react-dom next`
-`mkdir pages`
+- [ ] Run the commands
+      `npm init -y`
+      `npm install --save react react-dom next`
+      `mkdir pages`
 
-add to package.json
+- [ ] add to package.json
 
 ```json
 "scripts": {
@@ -23,9 +23,7 @@ add to package.json
 
 - [ ] Create a page at pages folder
 - [ ] Add a new page and links using `import Link from 'next/link';`
-
 - [ ] Create a shared component. It can be Header.js and Layout.js
-
 - [ ] Import your shared components into pages.
 
 ### Dynamic pages
@@ -54,8 +52,14 @@ const PostLink = props => (
 
 ### Fetching data
 
-Install `npm install --save isomorphic-unfetch`
-Using `getInitialProps` fetching data from https://api.tvmaze.com/search/shows?q=batman
-and return a object with the shows list
+- [ ] Install `npm install --save isomorphic-unfetch`
+- [ ] Using `getInitialProps` fetching data from https://api.tvmaze.com/search/shows?q=batman and return a object with the shows list
+- [ ] Now fetch data from a show in the `[id].js` page https://api.tvmaze.com/shows/${id}
 
-Now fetch data from a show in the `[id].js` page https://api.tvmaze.com/shows/${id}
+### React + Redux
+
+- [ ] Install `react-redux` and `redux`
+- [ ] Create the store and a reducer. You can use the ducks pattern.
+- [ ] Create `_app.js` file into pages folder.
+- [ ] Wrap MyApp component from `_app.js` with <Provider />
+- [ ] Get the store state in any page using Connect HOC and mapStateToProps

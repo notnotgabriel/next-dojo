@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
+import { connect } from 'react-redux';
 
 import Layout from './components/Layout';
 
-const Index = ({ shows }) => {
+const Index = ({ shows, showsStore }) => {
   return (
     <Layout>
       <h1>Batman TV Shows</h1>
@@ -31,4 +32,9 @@ Index.getInitialProps = async () => {
   };
 };
 
-export default Index;
+const mapStateToProps = state => {
+  const { shows } = state;
+  return { showsStore: shows.list };
+};
+
+export default connect(mapStateToProps)(Index);
